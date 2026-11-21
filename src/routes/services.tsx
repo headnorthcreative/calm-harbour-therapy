@@ -42,8 +42,9 @@ function Services() {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
 
-      <section className="bg-secondary">
-        <div className="mx-auto max-w-6xl px-6 pb-12 pt-12 md:pt-20">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-calm" aria-hidden="true" />
+        <div className="relative mx-auto max-w-6xl px-6 pb-12 pt-12 md:pt-20">
           <p className="mb-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">Feel Better Therapy · Services</p>
           <h1 className="max-w-3xl font-display text-5xl font-light leading-[1.05] md:text-6xl">Flexible therapy services <em className="text-primary">for your lifestyle.</em></h1>
           <p className="mt-6 max-w-xl text-muted-foreground">Professional online therapy and couples counselling delivered via secure video. All services provided by qualified Irish therapists available worldwide.</p>
@@ -52,7 +53,7 @@ function Services() {
             <Button asChild variant="outline" className="h-auto rounded-full px-7 py-3.5 text-base"><Link to="/pricing">See session prices</Link></Button>
           </div>
         </div>
-        <div className="mx-auto flex max-w-6xl flex-wrap gap-x-10 gap-y-4 border-t border-border px-6 py-7 text-sm text-muted-foreground">
+        <div className="relative mx-auto flex max-w-6xl flex-wrap gap-x-10 gap-y-4 border-t border-border px-6 py-7 text-sm text-muted-foreground">
           <span className="flex items-center gap-2"><ShieldCheck className="size-4 text-primary" aria-hidden="true" />Secure & confidential</span>
           <span className="flex items-center gap-2"><Video className="size-4 text-primary" aria-hidden="true" />Qualified Irish therapists</span>
           <span className="flex items-center gap-2"><CalendarDays className="size-4 text-primary" aria-hidden="true" />Flexible scheduling</span>
