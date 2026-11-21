@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 
 export const Route = createFileRoute("/")({
@@ -45,7 +45,7 @@ function Index() {
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <span className="font-display text-2xl">ciúin<span className="text-primary">.</span></span>
         <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
-          <a href="#services">Services</a><a href="#matching">Matching</a><a href="#where">Where we work</a>
+          <a href="#services">Services</a><a href="#matching">Matching</a><a href="#where">Where we work</a><Link to="/pricing">Pricing</Link>
         </nav>
         <a href="#start" className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground">Find your therapist</a>
       </header>
@@ -64,7 +64,7 @@ function Index() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a href="#start" className={btn}>Find your therapist</a>
-              <a href="#services" className={btnGhost}>See every price</a>
+              <Link to="/pricing" className={btnGhost}>See every price</Link>
             </div>
             <p className="mt-6 text-sm text-muted-foreground"><strong className="text-foreground">From €80</strong> · 50 minutes · Receipts accepted by VHI, Laya and Irish Life Health</p>
           </div>
