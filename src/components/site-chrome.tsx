@@ -1,6 +1,17 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import iacpLogo from "@/assets/iacp.webp.asset.json";
+import psiLogo from "@/assets/psi.avif.asset.json";
+import coruLogo from "@/assets/coru.avif.asset.json";
+import iahipLogo from "@/assets/iahip.webp.asset.json";
+
+const accreditations = [
+  { name: "Irish Association for Counselling and Psychotherapy (IACP)", asset: iacpLogo },
+  { name: "The Psychological Society of Ireland (PSI)", asset: psiLogo },
+  { name: "CORU — Ireland's health and social care regulator", asset: coruLogo },
+  { name: "Irish Association of Humanistic and Integrative Psychotherapy (IAHIP)", asset: iahipLogo },
+];
 
 const navItems = [
   { to: "/", hash: "how-it-works", label: "How it works" },
@@ -70,11 +81,44 @@ export function SiteHeader() {
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-10 text-center text-sm text-muted-foreground md:flex-row md:justify-between md:text-left">
-        <span>© 2026 Feel Better Therapy Ireland. All rights reserved.</span>
-        <Link to="/services" className="hover:text-foreground">Services</Link>
-        <span>In crisis? Call Samaritans free on 116 123, any time.</span>
+    <footer className="border-t border-border bg-secondary/40">
+      <div className="mx-auto max-w-6xl px-6">
+        <section aria-labelledby="footer-accreditation" className="border-b border-border py-12 md:py-14">
+          <h2 id="footer-accreditation" className="text-center text-sm font-medium text-muted-foreground">Fully accredited therapists from</h2>
+          <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 items-center gap-x-8 gap-y-7 sm:grid-cols-4 sm:gap-x-10">
+            {accreditations.map(({ name, asset }) => (
+              <div key={name} className="flex h-20 items-center justify-center md:h-24">
+                <img src={asset.url} alt={name} loading="lazy" className="max-h-full w-full max-w-48 object-contain grayscale" />
+              </div>
+            ))}
+          </div>
+        </section>
+        <div className="grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr] md:gap-16">
+          <div className="text-center md:text-left">
+            <Link to="/" aria-label="Feel Better Therapy home" className="inline-block">
+              <img src="/logo.svg" alt="Feel Better Therapy" className="-my-5 h-28 w-auto" />
+            </Link>
+            <p className="mx-auto mt-5 max-w-64 text-sm leading-relaxed text-muted-foreground md:mx-0">Online therapy in Ireland,<br />from the comfort of your home.</p>
+          </div>
+          <nav aria-label="Footer navigation" className="text-center md:text-left">
+            <h2 className="mb-5 text-sm font-medium">Feel Better Therapy</h2>
+            <ul className="flex flex-col gap-3 text-sm text-muted-foreground">
+              {navItems.map((item) => (
+                <li key={item.label}><Link to={item.to} {...("hash" in item ? { hash: item.hash } : {})} className="transition-colors hover:text-primary">{item.label}</Link></li>
+              ))}
+              <li><Link to="/" hash="start" className="transition-colors hover:text-primary">Match with a therapist <span aria-hidden="true">↗</span></Link></li>
+            </ul>
+          </nav>
+          <div className="text-center md:text-left">
+            <h2 className="mb-5 text-sm font-medium">Support when you need it</h2>
+            <p className="text-sm leading-relaxed text-muted-foreground">In crisis? Samaritans are here<br className="hidden md:block" /> any time, day or night.</p>
+            <a href="tel:116123" className="mt-3 inline-block font-display text-3xl text-primary underline-offset-4 hover:underline">116 123</a>
+            <p className="mt-2 text-xs text-muted-foreground">Free to call · 24 hours a day</p>
+          </div>
+        </div>
+        <div className="border-t border-border py-6 text-center text-xs leading-relaxed text-muted-foreground">
+          © 2026 Feel Better Therapy Ireland. All rights reserved.
+        </div>
       </div>
     </footer>
   );
