@@ -68,9 +68,18 @@ function Index() {
           <img src="/images/hero-home-illustration.webp" alt="A quiet living room in morning light with a green armchair by a tall window" className="w-full rounded-[2rem] shadow-xl" />
         </div>
         <div className="relative mx-auto grid max-w-6xl gap-6 border-t border-border px-6 py-8 text-sm text-muted-foreground md:grid-cols-3">
-          <span><strong className="text-foreground">Fully accredited therapists from</strong> IACP · PSI · CORU · IAHIP</span>
-          <span><strong className="text-foreground">Receipts accepted by</strong> VHI · Laya · Irish Life Health</span>
-          <span><strong className="text-foreground">100% confidential</strong> — secure video, GDPR-compliant notes</span>
+          <span className="block text-center">
+            <strong className="block font-normal text-foreground">Fully accredited therapists from</strong>
+            <span className="mt-2 block">IACP · PSI · CORU · IAHIP</span>
+          </span>
+          <span className="block text-center">
+            <strong className="block font-normal text-foreground">Receipts accepted by</strong>
+            <span className="mt-2 block">VHI · Laya · Irish Life Health</span>
+          </span>
+          <span className="block text-center">
+            <strong className="block font-normal text-foreground">100% confidential</strong>
+            <span className="mt-2 block">secure video, GDPR-compliant notes</span>
+          </span>
         </div>
       </section>
 
