@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Page architecture
+- Content pages use TanStack file routes and shared site chrome so navigation and branding remain consistent.
+- Keep Services timing values in the browser-safe therapy-services module and test them so published service details remain consistent.

@@ -15,9 +15,10 @@ export function SiteHeader() {
       </div>
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <Link to="/" aria-label="Feel Better Therapy home"><img src="/logo.svg" alt="Feel Better Therapy" className="-my-5 h-28 w-auto" /></Link>
-        <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
+        <nav className="hidden gap-6 text-sm text-muted-foreground md:flex">
           <Link to="/" hash="how-it-works">How it works</Link>
           <Link to="/" hash="why">Why us</Link>
+          <Link to="/services" activeProps={{ className: "text-foreground" }}>Services</Link>
           <Link to="/pricing" activeProps={{ className: "text-foreground" }}>Pricing</Link>
         </nav>
         <Link to="/" hash="start" className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground">Match with a therapist</Link>
@@ -31,6 +32,7 @@ export function SiteFooter() {
     <footer className="border-t border-border">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
         <span>© 2026 Feel Better Therapy Ireland. All rights reserved.</span>
+        <Link to="/services" className="hover:text-foreground">Services</Link>
         <span>In crisis? Call Samaritans free on 116 123, any time.</span>
       </div>
     </footer>
