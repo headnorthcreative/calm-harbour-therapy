@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader, SiteFooter, Eyebrow, btn, btnGhost } from "@/components/site-chrome";
-import heroAsset from "@/assets/hero-home-cozy-laptop.png.asset.json";
+import heroAsset from "@/assets/cosy-living-room-laptop.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,7 +66,7 @@ function Index() {
             </div>
             <p className="mt-6 text-sm text-muted-foreground"><strong className="text-foreground">Trusted by 1,000+ people</strong> · From €80 · No GP referral needed</p>
           </div>
-          <img src={heroAsset.url} alt="A smiling woman on a couch under a green blanket, typing on her laptop with a shamrock mug beside her" className="w-full rounded-[2rem] shadow-xl" />
+          <img src={heroAsset.url} alt="A woman relaxing in a green armchair with her laptop beside a bright window and houseplants" className="h-auto w-full rounded-[2rem] shadow-xl" />
         </div>
         <div className="relative mx-auto grid max-w-6xl gap-6 border-t border-border px-6 py-8 text-sm text-muted-foreground md:grid-cols-3">
           <span className="block text-center">
