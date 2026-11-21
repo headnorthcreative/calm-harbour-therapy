@@ -43,7 +43,7 @@ function About() {
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">Feel Better Therapy · About us</p>
             <h1 className="max-w-3xl font-display text-5xl font-light leading-[1.05] md:text-6xl">Mental health support, <em className="text-primary">made accessible.</em></h1>
             <p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">Online therapy for individuals and couples across Ireland. Compassionate care from the comfort of your home.</p>
-            <Button asChild className="mt-8 h-auto rounded-full px-7 py-3.5 text-base"><a href="https://feelbettertherapy.ie/get-started">Book a consultation<ArrowRight aria-hidden="true" /></a></Button>
+            <Button asChild className="mt-8 h-auto rounded-full px-7 py-3.5 text-base"><a href="https://feelbettertherapy.ie/get-started">Match with a therapist<ArrowRight aria-hidden="true" /></a></Button>
           </div>
         </section>
 
@@ -57,7 +57,7 @@ function About() {
 
         <section className="bg-muted">
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-24">
-            <figure>
+            <figure className="mx-auto w-full max-w-64 md:max-w-80">
               <img src={founderAsset.url} alt="Maura Davis, founder, psychologist and psychotherapist at Feel Better Therapy" className="h-auto w-full rounded-[2rem]" loading="lazy" />
               <figcaption className="mt-4 text-sm"><strong className="font-medium">Maura Davis</strong><span className="mt-1 block text-muted-foreground">Founder, Psychologist &amp; Psychotherapist</span></figcaption>
             </figure>
@@ -101,7 +101,7 @@ function About() {
             <h2 className="font-display text-4xl font-light md:text-5xl">Ready to feel better?</h2>
             <p className="mt-4 max-w-xl opacity-80">Take the first step towards a healthier mind today. Our therapists are ready to listen.</p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild variant="secondary" className="h-auto rounded-full px-7 py-3.5 text-base"><a href="https://feelbettertherapy.ie/get-started">Find a therapist<ArrowRight aria-hidden="true" /></a></Button>
+              <Button asChild variant="secondary" className="h-auto rounded-full px-7 py-3.5 text-base"><a href="https://feelbettertherapy.ie/get-started">Match with a therapist<ArrowRight aria-hidden="true" /></a></Button>
               <Button asChild variant="secondary" className="h-auto rounded-full px-7 py-3.5 text-base"><a href="https://feelbettertherapy.ie/faq">View FAQ</a></Button>
             </div>
           </div>
