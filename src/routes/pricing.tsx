@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { SiteHeader, SiteFooter, Eyebrow, btn, btnGhost } from "@/components/site-chrome";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
-      { title: "Pricing — Ciúin Therapy | Online therapy from €80" },
+      { title: "Pricing — Feel Better Therapy | Online therapy from €80" },
       { name: "description", content: "Simple therapy rates with no hidden fees: €80 individual, €120 couples, bundles from €300. Receipts accepted by VHI, Laya and Irish Life Health." },
       { property: "og:title", content: "Pricing — Know the cost before you start" },
       { property: "og:description", content: "Online therapy from €80 per 50-minute session. Bundles save up to €30." },
@@ -28,34 +29,20 @@ const faqs = [
   ["Are sessions secure and confidential?", "Absolutely. We use end-to-end encrypted video platforms specifically designed for telehealth. Your privacy is our utmost priority, and all notes are stored securely in compliance with GDPR."],
 ];
 
-function Eyebrow({ n, children }: { n: string; children: string }) {
-  return <p className="mb-4 text-sm uppercase tracking-[0.2em] text-muted-foreground"><span className="text-primary">{n}</span> · {children}</p>;
-}
-const btn = "inline-block rounded-full bg-primary px-7 py-3.5 font-medium text-primary-foreground transition hover:opacity-90";
-const btnGhost = "inline-block rounded-full border border-border bg-card px-7 py-3.5 font-medium transition hover:bg-muted";
 
 function Pricing() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="bg-primary py-2 text-center text-sm text-primary-foreground">
-        In crisis? Call Samaritans anytime on <a className="underline" href="tel:116123">116 123</a> — free
-      </div>
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-        <Link to="/" className="font-display text-2xl">ciúin<span className="text-primary">.</span></Link>
-        <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
-          <Link to="/">Home</Link><Link to="/pricing" className="text-foreground">Pricing</Link>
-        </nav>
-        <a href="#start" className="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground">Find your therapist</a>
-      </header>
+      <SiteHeader />
 
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-calm" />
         <div className="relative mx-auto grid max-w-6xl items-end gap-12 px-6 pb-16 pt-12 md:grid-cols-[1.4fr_1fr] md:pt-20">
           <div>
             <p className="mb-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">Rates</p>
-            <h1 className="font-display text-5xl font-light leading-[1.05] md:text-6xl">Know the cost <em className="text-primary">before you start.</em></h1>
-            <p className="mt-6 max-w-lg text-muted-foreground">Simple rates with no hidden fees. Pay for one session at a time, or book four and pay less.</p>
-            <a href="#start" className={`${btn} mt-8`}>Find your therapist</a>
+            <h1 className="font-display text-5xl font-light leading-[1.05] md:text-6xl">Transparent pricing <em className="text-primary">for your mental health.</em></h1>
+            <p className="mt-6 max-w-lg text-muted-foreground">Simple, affordable rates with no hidden fees. All sessions include official receipts provided for insurance claims with VHI, Laya, and Irish Life Health.</p>
+            <a href="/#start" className={`${btn} mt-8`}>Find your therapist</a>
           </div>
           <div className="rounded-3xl bg-card p-8 shadow-xl">
             <p><span className="font-display text-5xl">€80</span> <span className="text-muted-foreground">individual therapy / 50 minutes</span></p>
@@ -86,7 +73,7 @@ function Pricing() {
                 <div className="md:text-right">
                   <p><span className="font-display text-4xl">{pl.p}</span> <span className="text-sm text-muted-foreground">/ {pl.len}</span></p>
                   <p className="mt-1 text-xs text-muted-foreground">Insurance receipt included.</p>
-                  <a href="#start" className="mt-4 inline-block rounded-full border border-border px-5 py-2 text-sm font-medium transition hover:bg-muted">Start with this</a>
+                  <a href="/#start" className="mt-4 inline-block rounded-full border border-border px-5 py-2 text-sm font-medium transition hover:bg-muted">Start with this</a>
                 </div>
               </div>
             ))}
@@ -100,7 +87,7 @@ function Pricing() {
           <h2 className="font-display text-4xl font-light">Fifty minutes that are only about you.</h2>
           <p className="mt-6 text-muted-foreground">A session is fifty minutes with the same accredited therapist, in a private room, working on what you brought. Not an assessment queue, not a triage call, not a chatbot.</p>
           <p className="mt-4 text-muted-foreground">Some weeks that means talking something through. Other weeks it means learning a specific way to handle a feeling, a relationship or a memory. You can say which you need.</p>
-          <Link to="/" hash="services" className={`${btnGhost} mt-8`}>Read about the services</Link>
+          <Link to="/" hash="how-it-works" className={`${btnGhost} mt-8`}>How it works</Link>
         </div>
         <figure>
           <img src="/images/panel-when-therapy.webp" alt="Two calm scenes: a stack of papers and drooping plant, then two chairs and healthy plants" className="w-full rounded-[2rem]" />
@@ -117,9 +104,9 @@ function Pricing() {
           <div>
             <Eyebrow n="03">Insurance</Eyebrow>
             <h2 className="font-display text-4xl font-light">Your receipt makes claiming straightforward.</h2>
-            <p className="mt-6 text-muted-foreground">After payment you receive an automated professional receipt by email. It carries the accreditation details an insurer needs, and you can upload it straight to your insurer's app.</p>
+            <p className="mt-6 text-muted-foreground">We are fully recognised by major Irish health insurers: VHI Healthcare, Laya Healthcare and Irish Life Health are all approved. You will receive an automated professional receipt after every session via email, which you can submit directly for your claim.</p>
             <p className="mt-4 text-muted-foreground">You may be able to claim a portion back depending on your plan. We do not promise a figure, because the figure is your policy's, not ours.</p>
-            <a href="#start" className={`${btn} mt-8`}>Ask about your plan</a>
+            <a href="/#start" className={`${btn} mt-8`}>Ask about your plan</a>
           </div>
         </div>
       </section>
@@ -146,16 +133,11 @@ function Pricing() {
           <div className="mt-8 flex flex-wrap gap-x-10 gap-y-2 text-sm opacity-90">
             <span><strong>From €80</strong> · 50 minutes</span><span><strong>About 2 minutes</strong> to start the form</span><span><strong>No GP referral</strong> needed</span>
           </div>
-          <a href="#start" className="mt-10 inline-block rounded-full bg-background px-7 py-3.5 font-medium text-foreground">Find your therapist</a>
+          <a href="/#start" className="mt-10 inline-block rounded-full bg-background px-7 py-3.5 font-medium text-foreground">Find your therapist</a>
         </div>
       </section>
 
-      <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 text-sm text-muted-foreground md:flex-row md:justify-between">
-          <span>© 2026 Ciúin Therapy · Online therapy across Ireland</span>
-          <span>In crisis? Call Samaritans free on 116 123, any time.</span>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
