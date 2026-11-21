@@ -50,9 +50,18 @@ function Pricing() {
           </div>
         </div>
         <div className="relative mx-auto grid max-w-6xl gap-6 border-t border-border px-6 py-8 text-sm text-muted-foreground md:grid-cols-3">
-          <span><strong className="text-foreground">Therapists registered with</strong> IACP · PSI · CORU · IAHIP</span>
-          <span><strong className="text-foreground">Receipts accepted by</strong> VHI · Laya · Irish Life Health</span>
-          <span><strong className="text-foreground">Confidential by design</strong> — secure video, GDPR-compliant notes</span>
+          <span className="block text-center">
+            <strong className="block font-normal text-foreground">Therapists registered with</strong>
+            <span className="mt-2 block">IACP · PSI · CORU · IAHIP</span>
+          </span>
+          <span className="block text-center">
+            <strong className="block font-normal text-foreground">Receipts accepted by</strong>
+            <span className="mt-2 block">VHI · Laya · Irish Life Health</span>
+          </span>
+          <span className="block text-center">
+            <strong className="block font-normal text-foreground">Confidential by design</strong>
+            <span className="mt-2 block">secure video, GDPR-compliant notes</span>
+          </span>
         </div>
       </section>
 
