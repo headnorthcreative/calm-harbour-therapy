@@ -83,7 +83,7 @@ function Services() {
             <ol className="mt-8 space-y-7">{serviceSteps.map(([title, description], index) => <li key={title} className="flex gap-5"><span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-secondary font-display text-lg text-primary">{index + 1}</span><div><h3 className="font-medium">{title}</h3><p className="mt-1 text-muted-foreground">{description}</p></div></li>)}</ol>
           </div>
           <figure>
-            <img src="/images/panel-matching.webp" alt="An illustrated path from an open book and envelope to a welcoming doorway" className="aspect-square w-full rounded-[2rem] object-cover" loading="lazy" />
+            <img src="/images/panel-matching.webp" alt="An illustrated path from an open book and envelope to a welcoming doorway" className="h-auto w-full rounded-[2rem]" loading="lazy" />
             <figcaption className="mt-3 text-sm text-muted-foreground">Your needs, a personal match, and a first conversation.</figcaption>
           </figure>
         </div>
@@ -95,7 +95,7 @@ function Services() {
         <p className="mt-4 max-w-2xl text-muted-foreground">Experience the comfort and convenience of online therapy from your own space.</p>
         <div className="mt-10 grid items-center gap-12 md:grid-cols-2">
           <figure>
-            <img src="/images/panel-first-session.webp" alt="Illustration of a person at home, sitting comfortably in an armchair with a laptop for online therapy" className="aspect-square w-full rounded-[2rem] object-cover" loading="lazy" />
+            <img src="/images/panel-first-session.webp" alt="Illustration of a person at home, sitting comfortably in an armchair with a laptop for online therapy" className="h-auto w-full rounded-[2rem]" loading="lazy" />
             <figcaption className="mt-3 text-sm text-muted-foreground">Your own space. A secure call. Time to be heard.</figcaption>
           </figure>
           <div className="space-y-8">
