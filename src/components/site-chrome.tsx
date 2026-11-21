@@ -35,8 +35,8 @@ export function SiteHeader() {
       <div className="bg-primary py-2 text-center text-sm text-primary-foreground">
         In crisis? Call Samaritans anytime on <a className="underline" href="tel:116123">116 123</a> (free)
       </div>
-      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <Link to="/" aria-label="Feel Better Therapy home"><img src="/logo.svg" alt="Feel Better Therapy" className="-my-5 h-20 w-auto md:h-28" /></Link>
+      <header className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
+        <Link to="/" aria-label="Feel Better Therapy home"><img src="/logo-trimmed.svg" alt="Feel Better Therapy" className="h-11 w-auto md:h-9" /></Link>
         <nav className="hidden gap-6 text-sm text-muted-foreground lg:flex">
           {navItems.map((item) => (
             <Link key={item.label} to={item.to} {...("hash" in item ? { hash: item.hash } : {})} activeProps={{ className: "text-foreground" }}>{item.label}</Link>
@@ -97,7 +97,7 @@ export function SiteFooter() {
         <div className="grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr] md:gap-16">
           <div className="text-center md:text-left">
             <Link to="/" aria-label="Feel Better Therapy home" className="inline-block">
-              <img src="/logo.svg" alt="Feel Better Therapy" className="-my-5 h-28 w-auto" />
+              <img src="/logo-trimmed.svg" alt="Feel Better Therapy" className="h-9 w-auto" />
             </Link>
             <p className="mx-auto mt-5 max-w-64 text-sm leading-relaxed text-muted-foreground md:mx-0">Online therapy in Ireland,<br />from the comfort of your home.</p>
           </div>
