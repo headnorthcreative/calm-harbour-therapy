@@ -18,6 +18,7 @@ const navItems = [
   { to: "/", hash: "why", label: "Why us" },
   { to: "/services", label: "Services" },
   { to: "/pricing", label: "Pricing" },
+  { to: "/about", label: "About" },
 ] as const;
 
 export const btn = "inline-block rounded-full bg-primary px-7 py-3.5 font-medium text-primary-foreground transition hover:opacity-90";
@@ -36,7 +37,7 @@ export function SiteHeader() {
       </div>
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
         <Link to="/" aria-label="Feel Better Therapy home"><img src="/logo.svg" alt="Feel Better Therapy" className="-my-5 h-20 w-auto md:h-28" /></Link>
-        <nav className="hidden gap-6 text-sm text-muted-foreground md:flex">
+        <nav className="hidden gap-6 text-sm text-muted-foreground lg:flex">
           {navItems.map((item) => (
             <Link key={item.label} to={item.to} {...("hash" in item ? { hash: item.hash } : {})} activeProps={{ className: "text-foreground" }}>{item.label}</Link>
           ))}
@@ -48,14 +49,14 @@ export function SiteHeader() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 place-items-center rounded-full border border-border bg-card md:hidden"
+            className="grid h-10 w-10 place-items-center rounded-full border border-border bg-card lg:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </header>
       {open && (
-        <nav className="border-t border-border bg-background px-6 py-4 md:hidden">
+        <nav className="border-t border-border bg-background px-6 py-4 lg:hidden">
           <ul className="flex flex-col gap-1 text-base">
             {navItems.map((item) => (
               <li key={item.label}>
