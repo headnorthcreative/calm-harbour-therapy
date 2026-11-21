@@ -14,7 +14,7 @@ export function SiteHeader() {
         In crisis? Call Samaritans anytime on <a className="underline" href="tel:116123">116 123</a> (free)
       </div>
       <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-        <Link to="/" aria-label="Feel Better Therapy home"><img src="/logo.svg" alt="Feel Better Therapy" className="-my-4 h-24 w-auto" /></Link>
+        <Link to="/" aria-label="Feel Better Therapy home"><img src="/logo.svg" alt="Feel Better Therapy" className="-my-5 h-28 w-auto" /></Link>
         <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
           <Link to="/" hash="how-it-works">How it works</Link>
           <Link to="/" hash="why">Why us</Link>
