@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteHeader, SiteFooter, Eyebrow, btn, btnGhost } from "@/components/site-chrome";
-import heroAsset from "@/assets/cosy-living-room-laptop.png.asset.json";
+import heroAsset from "@/assets/cosy-macbook-window.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
