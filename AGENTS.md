@@ -32,3 +32,4 @@ use the editor.
 ## Page architecture
 - Content pages use TanStack file routes and shared site chrome so navigation and branding remain consistent.
 - Keep Services timing values in the browser-safe therapy-services module and test them so published service details remain consistent.
+- Keep the home mood interaction in a browser-safe component with local React state only, so emotional check-ins are never stored or transmitted.

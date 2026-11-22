@@ -109,6 +109,12 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
   --gradient-calm: radial-gradient(ellipse at top left, oklch(0.92 0.04 150), transparent 60%), radial-gradient(ellipse at bottom right, oklch(0.92 0.04 60), transparent 55%);
+  --shadow-home-photo: 0 18px 44px -24px oklch(0.27 0.03 160 / 0.3);
+  --shadow-home-soft: 0 10px 30px -20px oklch(0.27 0.03 160 / 0.18);
+  --shadow-home-hover: 0 16px 36px -22px oklch(0.27 0.03 160 / 0.28);
+  --home-glass: oklch(0.99 0.006 110 / 0.88);
+  --gradient-home-band: linear-gradient(to bottom, var(--background), var(--secondary) 16%, var(--secondary) 84%, var(--background));
+  --gradient-home-closing: linear-gradient(135deg, var(--primary), oklch(0.32 0.045 165));
 }
 
 .dark {
@@ -144,6 +150,11 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+  --home-glass: oklch(0.208 0.042 265.755 / 0.9);
+  --shadow-home-photo: 0 18px 44px -24px oklch(0 0 0 / 0.4);
+  --shadow-home-soft: 0 10px 30px -20px oklch(0 0 0 / 0.3);
+  --shadow-home-hover: 0 16px 36px -22px oklch(0 0 0 / 0.5);
+  --gradient-home-closing: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
 @layer base {
@@ -162,3 +173,29 @@
 }
 @keyframes breathe { 0%,100% { transform: scale(1); opacity:.55 } 50% { transform: scale(1.12); opacity:.85 } }
 @utility animate-breathe { animation: breathe 9s ease-in-out infinite; }
+
+.home-page { letter-spacing: 0; }
+.home-photo-image { box-shadow: var(--shadow-home-photo); }
+.home-photo-badge { background: var(--home-glass); backdrop-filter: blur(16px); box-shadow: var(--shadow-home-soft); }
+.home-mood { box-shadow: var(--shadow-home-soft); }
+.home-soft-band { background: var(--gradient-home-band); }
+.home-closing { background: var(--gradient-home-closing); }
+.home-service { transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease; }
+.home-service:hover { transform: translateY(-4px); box-shadow: var(--shadow-home-hover); border-color: var(--primary); }
+.mood-range { appearance: none; height: 12px; border-radius: 999px; background: linear-gradient(to right, var(--accent), var(--secondary), var(--primary)); cursor: pointer; }
+.mood-range::-webkit-slider-thumb { appearance: none; width: 26px; height: 26px; border: 5px solid var(--card); border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 1px var(--primary); }
+.mood-range::-moz-range-thumb { width: 16px; height: 16px; border: 5px solid var(--card); border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 1px var(--primary); }
+.mood-range:focus-visible { outline: 2px solid var(--ring); outline-offset: 8px; }
+.breathing-cue { display: flex; align-items: center; gap: 10px; min-width: 112px; }
+.breathing-words { width: 76px; white-space: nowrap; }
+.breathing-words::after { content: "Breathe in"; animation: breathing-words 8s step-end infinite; }
+.breathing-line { display: block; height: 2px; width: 32px; background: var(--primary); transform-origin: left center; animation: breathing-line 8s ease-in-out infinite; }
+@keyframes breathing-words { 0%, 100% { content: "Breathe in"; } 50% { content: "Breathe out"; } }
+@keyframes breathing-line { 0%, 100% { transform: scaleX(0.3); } 50% { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) {
+  .home-service { transition: none; }
+  .home-service:hover { transform: none; }
+  .breathing-words::after, .breathing-line { animation: none; }
+  .breathing-words::after { content: "At your pace"; }
+  .breathing-words { width: auto; }
+}
