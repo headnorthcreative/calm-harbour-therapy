@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, HeartHandshake, Home, CalendarDays, ShieldCheck, Video } from "lucide-react";
 import { SiteHeader, SiteFooter, Eyebrow } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
+import { AccreditationStrip, ClosingInvitation, MatchLink } from "@/components/page-details";
 import { serviceFaqs, serviceSteps } from "@/lib/therapy-services";
 
 export const Route = createFileRoute("/services")({
@@ -33,50 +34,47 @@ const services = [
   },
 ];
 
-function MatchButton({ children = "Get started today" }: { children?: string }) {
-  return <Button asChild className="h-auto rounded-full px-7 py-3.5 text-base"><a href="https://feelbettertherapy.ie/get-started">{children}<ArrowRight aria-hidden="true" /></a></Button>;
-}
-
 function Services() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="home-page min-h-screen bg-background text-foreground">
       <SiteHeader />
 
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-calm" aria-hidden="true" />
-        <div className="relative mx-auto max-w-6xl px-6 pb-12 pt-12 md:pt-20">
-          <p className="mb-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">Feel Better Therapy · Services</p>
-          <h1 className="max-w-3xl font-display text-5xl font-light leading-[1.05] md:text-6xl">Flexible therapy services <em className="text-primary">for your lifestyle.</em></h1>
+        <div className="relative mx-auto max-w-6xl px-6 pb-12 pt-10 md:pt-12">
+          <p className="mb-5 flex items-center gap-2 text-sm text-primary"><span className="h-px w-8 bg-primary/40" />Feel Better Therapy · Services</p>
+          <h1 className="max-w-3xl font-display text-5xl font-light leading-[1.12] lg:text-6xl">Flexible therapy services <em className="text-primary">for your lifestyle.</em></h1>
           <p className="mt-6 max-w-xl text-muted-foreground">Professional online therapy and couples counselling delivered via secure video. All services provided by qualified Irish therapists available worldwide.</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <MatchButton />
+            <MatchLink />
             <Button asChild variant="outline" className="h-auto rounded-full px-7 py-3.5 text-base"><Link to="/pricing">See session prices</Link></Button>
           </div>
         </div>
-        <div className="relative mx-auto flex max-w-6xl flex-wrap gap-x-10 gap-y-4 border-t border-border px-6 py-7 text-sm text-muted-foreground">
-          <span className="flex items-center gap-2"><ShieldCheck className="size-4 text-primary" aria-hidden="true" />Secure & confidential</span>
-          <span className="flex items-center gap-2"><Video className="size-4 text-primary" aria-hidden="true" />Qualified Irish therapists</span>
-          <span className="flex items-center gap-2"><CalendarDays className="size-4 text-primary" aria-hidden="true" />Flexible scheduling</span>
+        <div className="relative mx-auto grid max-w-6xl gap-6 border-t border-border px-6 py-7 text-center text-sm text-muted-foreground md:grid-cols-3">
+          <span><ShieldCheck className="mx-auto mb-2 size-4 text-primary" aria-hidden="true" /><strong className="block font-normal text-foreground">Secure & confidential</strong><span className="mt-2 block">Encrypted video, private sessions</span></span>
+          <span><Video className="mx-auto mb-2 size-4 text-primary" aria-hidden="true" /><strong className="block font-normal text-foreground">Qualified Irish therapists</strong><span className="mt-2 block">Personal, professional care</span></span>
+          <span><CalendarDays className="mx-auto mb-2 size-4 text-primary" aria-hidden="true" /><strong className="block font-normal text-foreground">Flexible scheduling</strong><span className="mt-2 block">Sessions that fit your life</span></span>
         </div>
       </section>
+      <AccreditationStrip />
 
       <section className="mx-auto max-w-6xl px-6 py-20 md:py-24">
         <Eyebrow n="01">Our services</Eyebrow>
         <h2 className="font-display text-4xl font-light">A space for you. Or for you both.</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {services.map((service, index) => (
-            <article key={service.title} className="flex flex-col rounded-3xl border border-border bg-card p-7 md:p-10">
+            <article key={service.title} className="home-service flex flex-col rounded-lg border border-border bg-card p-7 md:p-8">
               <div className="flex items-center justify-between"><service.icon className="size-8 text-primary" strokeWidth={1.4} aria-hidden="true" /><span className="text-sm text-muted-foreground">0{index + 1}</span></div>
               <h3 className="mt-6 font-display text-3xl font-light">{service.title}</h3>
               <p className="mt-4 text-muted-foreground">{service.description}</p>
               <ul className="mb-8 mt-7 space-y-3">{service.features.map((feature) => <li key={feature} className="flex items-start gap-3"><Check className="mt-1 size-4 shrink-0 text-primary" aria-hidden="true" />{feature}</li>)}</ul>
-              <div className="mt-auto"><MatchButton /></div>
+              <div className="mt-auto border-t border-border pt-6"><MatchLink /></div>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="bg-muted">
+      <section className="home-soft-band">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-24">
           <div>
             <Eyebrow n="02">How it works</Eyebrow>
@@ -110,7 +108,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-secondary">
+      <section className="home-soft-band">
         <div className="mx-auto max-w-3xl px-6 py-20 md:py-24">
           <Eyebrow n="04">Questions</Eyebrow>
           <h2 className="font-display text-4xl font-light">Frequently asked questions.</h2>
@@ -118,14 +116,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="bg-primary text-primary-foreground">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-          <p className="mb-4 text-sm uppercase tracking-[0.2em] opacity-70">05 · Start here</p>
-          <h2 className="font-display text-4xl font-light md:text-5xl">Ready to start therapy?</h2>
-          <p className="mt-4 max-w-xl opacity-80">Choose the service that works for you and get matched with the right therapist today.</p>
-          <Button asChild variant="secondary" className="mt-8 h-auto rounded-full px-7 py-3.5 text-base"><a href="https://feelbettertherapy.ie/get-started">Get matched now<ArrowRight aria-hidden="true" /></a></Button>
-        </div>
-      </section>
+      <ClosingInvitation title="Ready to start therapy?" description="Choose the service that works for you and get matched with the right therapist today." />
       <SiteFooter />
     </div>
   );

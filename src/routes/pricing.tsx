@@ -1,5 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiteHeader, SiteFooter, Eyebrow, btn, btnGhost } from "@/components/site-chrome";
+import { ArrowRight, Clock3, ShieldCheck } from "lucide-react";
+import { SiteHeader, SiteFooter, Eyebrow } from "@/components/site-chrome";
+import { Button } from "@/components/ui/button";
+import { AccreditationStrip, ClosingInvitation, MatchLink } from "@/components/page-details";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -32,21 +35,23 @@ const faqs = [
 
 function Pricing() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="home-page min-h-screen bg-background text-foreground">
       <SiteHeader />
 
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-calm" />
-        <div className="relative mx-auto grid max-w-6xl items-end gap-12 px-6 pb-16 pt-12 md:grid-cols-[1.4fr_1fr] md:pt-20">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 pb-12 pt-10 md:grid-cols-[1.4fr_1fr] md:pt-12">
           <div>
-            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">Rates</p>
-            <h1 className="font-display text-5xl font-light leading-[1.05] md:text-6xl">Transparent pricing <em className="text-primary">for your mental health.</em></h1>
+            <p className="mb-5 flex items-center gap-2 text-sm text-primary"><span className="h-px w-8 bg-primary/40" />Feel Better Therapy · Rates</p>
+            <h1 className="font-display text-5xl font-light leading-[1.12] lg:text-6xl">Transparent pricing <em className="text-primary">for your mental health.</em></h1>
             <p className="mt-6 max-w-lg text-muted-foreground">Simple, affordable rates with no hidden fees. All sessions include official receipts provided for insurance claims with VHI, Laya, and Irish Life Health.</p>
-            <a href="/#start" className={`${btn} mt-8`}>Find your therapist</a>
+            <div className="mt-8"><MatchLink /></div>
           </div>
-          <div className="rounded-3xl bg-card p-8 shadow-xl">
-            <p><span className="font-display text-5xl">€80</span> <span className="text-muted-foreground">individual therapy / 50 minutes</span></p>
-            <p className="mt-4 text-sm text-muted-foreground">Receipts accepted by VHI, Laya and Irish Life Health.</p>
+          <div className="home-mood rounded-lg border border-border bg-card p-8">
+            <div className="flex items-center justify-between gap-4 text-sm text-muted-foreground"><span>Individual therapy</span><ShieldCheck className="size-5 text-primary" strokeWidth={1.4} /></div>
+            <p className="mt-6 font-display text-6xl font-light text-primary">€80</p>
+            <p className="mt-3 flex items-center gap-2 text-sm text-muted-foreground"><Clock3 className="size-4" />50 minutes, just for you</p>
+            <div className="mt-6 border-t border-border pt-5 text-center text-sm"><strong className="block font-normal">Receipts accepted by</strong><span className="mt-2 block text-muted-foreground">VHI · Laya · Irish Life Health</span></div>
           </div>
         </div>
         <div className="relative mx-auto grid max-w-6xl gap-6 border-t border-border px-6 py-8 text-sm text-muted-foreground md:grid-cols-3">
@@ -64,25 +69,27 @@ function Pricing() {
           </span>
         </div>
       </section>
+      <AccreditationStrip />
 
-      <section className="bg-secondary">
+      <section className="home-soft-band">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <Eyebrow n="01">Prices</Eyebrow>
           <h2 className="font-display text-4xl font-light">Session prices, in plain language.</h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">Every option includes secure online therapy and a professional receipt after payment. What you can claim back depends on your own insurance plan.</p>
           <div className="mt-10 space-y-4">
             {plans.map((pl, i) => (
-              <div key={pl.t} className="grid gap-6 rounded-3xl bg-card p-8 md:grid-cols-[auto_1fr_auto] md:items-center">
+              <div key={pl.t} className="home-service grid gap-6 rounded-lg border border-border bg-card p-7 md:grid-cols-[auto_1fr_auto] md:items-center md:p-8">
                 <span className="text-sm text-muted-foreground">0{i + 1}</span>
                 <div>
-                  <h3 className="text-xl font-medium">{pl.t}</h3>
+                  <h3 className="font-display text-2xl font-light">{pl.t}</h3>
                   <p className="mt-2 max-w-xl text-muted-foreground">{pl.d}</p>
                   {pl.save && <p className="mt-3 text-sm text-muted-foreground">One at a time: <strong className="text-foreground">{pl.save[0]}</strong> · <span className="text-primary">{pl.save[1]}</span></p>}
                 </div>
                 <div className="md:text-right">
-                  <p><span className="font-display text-4xl">{pl.p}</span> <span className="text-sm text-muted-foreground">/ {pl.len}</span></p>
+                  <p className="font-display text-4xl text-primary">{pl.p}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{pl.len}</p>
                   <p className="mt-1 text-xs text-muted-foreground">Insurance receipt included.</p>
-                  <a href="/#start" className="mt-4 inline-block rounded-full border border-border px-5 py-2 text-sm font-medium transition hover:bg-muted">Start with this</a>
+                  <div className="mt-5"><MatchLink /></div>
                 </div>
               </div>
             ))}
@@ -96,7 +103,7 @@ function Pricing() {
           <h2 className="font-display text-4xl font-light">Fifty minutes that are only about you.</h2>
           <p className="mt-6 text-muted-foreground">A session is fifty minutes with the same accredited therapist, in a private room, working on what you brought. Not an assessment queue, not a triage call, not a chatbot.</p>
           <p className="mt-4 text-muted-foreground">Some weeks that means talking something through. Other weeks it means learning a specific way to handle a feeling, a relationship or a memory. You can say which you need.</p>
-          <Link to="/" hash="how-it-works" className={`${btnGhost} mt-8`}>How it works</Link>
+          <Button asChild variant="outline" className="mt-8 h-auto rounded-full px-7 py-3.5"><Link to="/" hash="how-it-works">How it works <ArrowRight /></Link></Button>
         </div>
         <figure>
           <img src="/images/panel-when-therapy.webp" alt="Two calm scenes: a stack of papers and drooping plant, then two chairs and healthy plants" className="w-full rounded-[2rem]" />
@@ -104,7 +111,7 @@ function Pricing() {
         </figure>
       </section>
 
-      <section className="bg-muted">
+      <section className="home-soft-band">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-24 md:grid-cols-2">
           <figure className="md:order-first">
             <img src="/images/panel-cost-insurance.webp" alt="A blank receipt, sage envelope and unmarked card arranged on a table with a leafy sprig" className="w-full rounded-[2rem]" />
@@ -115,7 +122,7 @@ function Pricing() {
             <h2 className="font-display text-4xl font-light">Your receipt makes claiming straightforward.</h2>
             <p className="mt-6 text-muted-foreground">We are fully recognised by major Irish health insurers: VHI Healthcare, Laya Healthcare and Irish Life Health are all approved. You will receive an automated professional receipt after every session via email, which you can submit directly for your claim.</p>
             <p className="mt-4 text-muted-foreground">You may be able to claim a portion back depending on your plan. We do not promise a figure, because the figure is your policy's, not ours.</p>
-            <a href="/#start" className={`${btn} mt-8`}>Ask about your plan</a>
+            <div className="mt-8"><MatchLink /></div>
           </div>
         </div>
       </section>
@@ -127,24 +134,14 @@ function Pricing() {
         <div className="mt-10 divide-y divide-border border-y border-border">
           {faqs.map(([q, a]) => (
             <details key={q} className="group py-5">
-              <summary className="flex cursor-pointer list-none items-center justify-between font-medium">{q}<span className="text-primary transition group-open:rotate-45">+</span></summary>
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-5 font-medium">{q}<span className="shrink-0 text-xl text-primary transition group-open:rotate-45" aria-hidden="true">+</span></summary>
               <p className="mt-3 text-muted-foreground">{a}</p>
             </details>
           ))}
         </div>
       </section>
 
-      <section id="start" className="mx-auto max-w-6xl px-6 pb-24">
-        <div className="rounded-[2rem] bg-primary p-10 text-primary-foreground md:p-16">
-          <p className="mb-4 text-sm uppercase tracking-[0.2em] opacity-70">05 · Start here</p>
-          <h2 className="font-display text-4xl font-light md:text-5xl">Start with one clear step</h2>
-          <p className="mt-4 max-w-xl opacity-80">Tell us what you need. We will match you with an accredited therapist, usually within 24 hours.</p>
-          <div className="mt-8 flex flex-wrap gap-x-10 gap-y-2 text-sm opacity-90">
-            <span><strong>From €80</strong> · 50 minutes</span><span><strong>About 2 minutes</strong> to start the form</span><span><strong>No GP referral</strong> needed</span>
-          </div>
-          <a href="/#start" className="mt-10 inline-block rounded-full bg-background px-7 py-3.5 font-medium text-foreground">Find your therapist</a>
-        </div>
-      </section>
+      <ClosingInvitation title="Start with one clear step" description="Tell us what you need. We will match you with an accredited therapist, usually within 24 hours." />
 
       <SiteFooter />
     </div>

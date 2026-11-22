@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, HeartHandshake, LockKeyhole, ShieldCheck, Wifi } from "lucide-react";
 import { SiteHeader, SiteFooter, Eyebrow } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
+import { AccreditationStrip, ClosingInvitation, MatchLink } from "@/components/page-details";
 import founderAsset from "@/assets/maura-davis-founder.jpeg.asset.json";
 
 export const Route = createFileRoute("/about")({
@@ -34,18 +35,19 @@ const methods = [
 
 function About() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="home-page min-h-screen bg-background text-foreground">
       <SiteHeader />
       <main>
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-calm" aria-hidden="true" />
-          <div className="relative mx-auto max-w-6xl px-6 pb-16 pt-12 md:pt-20">
-            <p className="mb-6 text-sm uppercase tracking-[0.2em] text-muted-foreground">Feel Better Therapy · About us</p>
-            <h1 className="max-w-3xl font-display text-5xl font-light leading-[1.05] md:text-6xl">Mental health support, <em className="text-primary">made accessible.</em></h1>
+          <div className="relative mx-auto max-w-6xl px-6 pb-12 pt-10 md:pt-12">
+            <p className="mb-5 flex items-center gap-2 text-sm text-primary"><span className="h-px w-8 bg-primary/40" />Feel Better Therapy · About us</p>
+            <h1 className="max-w-3xl font-display text-5xl font-light leading-[1.12] lg:text-6xl">Mental health support, <em className="text-primary">made accessible.</em></h1>
             <p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">Online therapy for individuals and couples across Ireland. Compassionate care from the comfort of your home.</p>
-            <Button asChild className="mt-8 h-auto rounded-full px-7 py-3.5 text-base"><a href="https://feelbettertherapy.ie/get-started">Match with a therapist<ArrowRight aria-hidden="true" /></a></Button>
+            <div className="mt-8"><MatchLink /></div>
           </div>
         </section>
+        <AccreditationStrip />
 
         <section className="mx-auto max-w-6xl px-6 py-20 md:py-24">
           <Eyebrow n="01">Our mission</Eyebrow>
@@ -55,10 +57,10 @@ function About() {
           </div>
         </section>
 
-        <section className="bg-muted">
+        <section className="home-soft-band">
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-24">
             <figure className="mx-auto w-full max-w-64 md:max-w-80">
-              <img src={founderAsset.url} alt="Maura Davis, founder, psychologist and psychotherapist at Feel Better Therapy" className="h-auto w-full rounded-[2rem]" loading="lazy" />
+              <img src={founderAsset.url} alt="Maura Davis, founder, psychologist and psychotherapist at Feel Better Therapy" className="home-photo-image h-auto w-full rounded-t-[6rem] rounded-b-lg" loading="lazy" />
               <figcaption className="mt-4 text-sm"><strong className="font-medium">Maura Davis</strong><span className="mt-1 block text-muted-foreground">Founder, Psychologist &amp; Psychotherapist</span></figcaption>
             </figure>
             <div>
@@ -76,11 +78,11 @@ function About() {
           <h2 className="font-display text-4xl font-light">Care with you at the centre.</h2>
           <p className="mt-4 max-w-xl text-muted-foreground">The principles that guide every session, every feature, and every interaction.</p>
           <div className="mt-10 grid gap-x-12 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((value) => <article key={value.title} className="border-t border-border pt-6"><value.icon className="size-7 text-primary" strokeWidth={1.4} aria-hidden="true" /><h3 className="mt-5 text-xl font-medium">{value.title}</h3><p className="mt-3 leading-relaxed text-muted-foreground">{value.description}</p></article>)}
+            {values.map((value) => <article key={value.title} className="border-t border-primary/25 pt-6"><value.icon className="size-7 text-primary" strokeWidth={1.4} aria-hidden="true" /><h3 className="mt-5 font-display text-2xl font-light">{value.title}</h3><p className="mt-3 leading-relaxed text-muted-foreground">{value.description}</p></article>)}
           </div>
         </section>
 
-        <section className="bg-secondary">
+        <section className="home-soft-band">
           <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
             <Eyebrow n="04">Clinical excellence</Eyebrow>
             <div className="grid gap-10 md:grid-cols-[1fr_1.2fr] md:gap-16">
@@ -95,17 +97,7 @@ function About() {
           </div>
         </section>
 
-        <section className="bg-primary text-primary-foreground">
-          <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-            <p className="mb-4 text-sm uppercase tracking-[0.2em] opacity-70">05 · Start here</p>
-            <h2 className="font-display text-4xl font-light md:text-5xl">Ready to feel better?</h2>
-            <p className="mt-4 max-w-xl opacity-80">Take the first step towards a healthier mind today. Our therapists are ready to listen.</p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild variant="secondary" className="h-auto rounded-full px-7 py-3.5 text-base"><a href="https://feelbettertherapy.ie/get-started">Match with a therapist<ArrowRight aria-hidden="true" /></a></Button>
-              <Button asChild variant="secondary" className="h-auto rounded-full px-7 py-3.5 text-base"><a href="https://feelbettertherapy.ie/faq">View FAQ</a></Button>
-            </div>
-          </div>
-        </section>
+        <ClosingInvitation title="Ready to feel better?" description="Take the first step towards a healthier mind today. Our therapists are ready to listen." />
       </main>
       <SiteFooter />
     </div>
