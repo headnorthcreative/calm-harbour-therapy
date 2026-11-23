@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Clock3, HeartHandshake, ShieldCheck } from "lucide-react";
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
-import { AccreditationStrip } from "@/components/page-details";
 import { TherapistMatchingForm } from "@/components/therapist-matching-form";
 
 export const Route = createFileRoute("/get-started")({
@@ -41,7 +40,6 @@ function GetStarted() {
         </aside>
         <TherapistMatchingForm />
       </section>
-      <AccreditationStrip />
     </main>
     <SiteFooter />
   </div>;

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Clock3, ShieldCheck } from "lucide-react";
 import { SiteHeader, SiteFooter, Eyebrow } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
-import { AccreditationStrip, ClosingInvitation, MatchLink } from "@/components/page-details";
+import { ClosingInvitation, MatchLink } from "@/components/page-details";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -69,7 +69,6 @@ function Pricing() {
           </span>
         </div>
       </section>
-      <AccreditationStrip />
 
       <section className="home-soft-band">
         <div className="mx-auto max-w-6xl px-6 py-24">

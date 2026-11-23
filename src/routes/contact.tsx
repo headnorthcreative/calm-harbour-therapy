@@ -3,7 +3,7 @@ import { Clock3, Mail, Send, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { SiteHeader, SiteFooter, Eyebrow } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
-import { AccreditationStrip, ClosingInvitation } from "@/components/page-details";
+import { ClosingInvitation } from "@/components/page-details";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -62,7 +62,6 @@ function Contact() {
           <span><Mail className="mx-auto mb-2 size-4 text-primary" aria-hidden="true" /><strong className="block font-normal text-foreground">Prefer email?</strong><span className="mt-2 block"><a className="underline underline-offset-4 hover:text-primary" href="mailto:contact@feelbettertherapy.ie">contact@feelbettertherapy.ie</a></span></span>
         </div>
       </section>
-      <AccreditationStrip />
 
       <section className="mx-auto max-w-6xl px-6 py-20 md:py-24">
         <div className="grid gap-12 md:grid-cols-[1.2fr_1fr] md:gap-16">
