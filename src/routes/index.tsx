@@ -5,6 +5,10 @@ import { HomeMood } from "@/components/home-mood";
 import { serviceDetails } from "@/lib/therapy-services";
 import { SiteHeader, SiteFooter, Eyebrow, btnGhost } from "@/components/site-chrome";
 import heroAsset from "@/assets/cosy-macbook-window.png.asset.json";
+import iacpLogo from "@/assets/iacp.webp.asset.json";
+import psiLogo from "@/assets/psi.avif.asset.json";
+import coruLogo from "@/assets/coru.avif.asset.json";
+import iahipLogo from "@/assets/iahip.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,6 +51,12 @@ const stories = [
 ];
 const places = ["Dublin", "Cork", "Galway", "Limerick", "Waterford", "Anywhere with a signal"];
 const serviceTags = ["One-to-one", "Together", "Focused work", "A little continuity"];
+const accreditationLogos = [
+  { name: "IACP", asset: iacpLogo },
+  { name: "The Psychological Society of Ireland", asset: psiLogo },
+  { name: "CORU", asset: coruLogo },
+  { name: "IAHIP", asset: iahipLogo },
+];
 
 function Index() {
   return (
@@ -93,6 +103,12 @@ function Index() {
           </span>
         </div>
       </section>
+
+      <div className="mx-auto max-w-6xl border-b border-border px-6 py-7" aria-label="Therapist accreditation bodies">
+        <div className="mx-auto grid max-w-2xl grid-cols-4 items-center gap-5 sm:gap-12">
+          {accreditationLogos.map(({ name, asset }) => <img key={name} src={asset.url} alt={name} className="mx-auto h-12 w-full object-contain opacity-65 grayscale sm:h-14" />)}
+        </div>
+      </div>
 
       <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-24">
         <div>

@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, HeartHandshake, LockKeyhole, ShieldCheck, Wifi } from "lucide-react";
 import { SiteHeader, SiteFooter, Eyebrow } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
-import { ClosingInvitation, MatchLink } from "@/components/page-details";
+import { AccreditationStrip, ClosingInvitation, MatchLink } from "@/components/page-details";
 import founderAsset from "@/assets/maura-davis-founder.jpeg.asset.json";
 
 export const Route = createFileRoute("/about")({
@@ -47,6 +47,7 @@ function About() {
             <div className="mt-8"><MatchLink /></div>
           </div>
         </section>
+        <AccreditationStrip />
 
         <section className="mx-auto max-w-6xl px-6 py-20 md:py-24">
           <Eyebrow n="01">Our mission</Eyebrow>

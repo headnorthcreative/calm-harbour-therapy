@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Check, HeartHandshake, Home, CalendarDays, ShieldCheck, Video } from "lucide-react";
 import { SiteHeader, SiteFooter, Eyebrow } from "@/components/site-chrome";
 import { Button } from "@/components/ui/button";
-import { ClosingInvitation, MatchLink } from "@/components/page-details";
+import { AccreditationStrip, ClosingInvitation, MatchLink } from "@/components/page-details";
 import { serviceFaqs, serviceSteps } from "@/lib/therapy-services";
 
 export const Route = createFileRoute("/services")({
@@ -56,6 +56,7 @@ function Services() {
           <span><CalendarDays className="mx-auto mb-2 size-4 text-primary" aria-hidden="true" /><strong className="block font-normal text-foreground">Flexible scheduling</strong><span className="mt-2 block">Sessions that fit your life</span></span>
         </div>
       </section>
+      <AccreditationStrip />
 
       <section className="mx-auto max-w-6xl px-6 py-20 md:py-24">
         <Eyebrow n="01">Our services</Eyebrow>

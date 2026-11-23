@@ -1,6 +1,21 @@
 import { ArrowUpRight, Clock3 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
+import iacpLogo from "@/assets/iacp.webp.asset.json";
+import psiLogo from "@/assets/psi.avif.asset.json";
+import coruLogo from "@/assets/coru.avif.asset.json";
+import iahipLogo from "@/assets/iahip.webp.asset.json";
+
+const logos = [
+  { name: "IACP", asset: iacpLogo },
+  { name: "The Psychological Society of Ireland", asset: psiLogo },
+  { name: "CORU", asset: coruLogo },
+  { name: "IAHIP", asset: iahipLogo },
+];
+
+export function AccreditationStrip() {
+  return <div className="mx-auto max-w-6xl border-b border-border px-6 py-7" aria-label="Therapist accreditation bodies"><div className="mx-auto grid max-w-2xl grid-cols-4 items-center gap-5 sm:gap-12">{logos.map(({ name, asset }) => <img key={name} src={asset.url} alt={name} className="mx-auto h-12 w-full object-contain opacity-65 grayscale sm:h-14" />)}</div></div>;
+}
 
 export function MatchLink() {
   return <Button asChild className="h-auto rounded-full px-6 py-3.5"><Link to="/get-started">Match with a therapist <ArrowUpRight aria-hidden="true" /></Link></Button>;
