@@ -34,3 +34,4 @@ use the editor.
 - Keep Services timing values in the browser-safe therapy-services module and test them so published service details remain consistent.
 - Keep the home mood interaction in a browser-safe component with local React state only, so emotional check-ins are never stored or transmitted.
 - Use shared page-details for secondary-page accreditation strips, matching buttons and closing invitations so their presentation and matching destination stay consistent.
+- Keep matching choices and Zod validation in the browser-safe therapist-matching module so both steps and future server delivery use the same field contract; never persist matching answers in browser storage.

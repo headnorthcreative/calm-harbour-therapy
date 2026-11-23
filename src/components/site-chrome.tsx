@@ -44,7 +44,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <Link to="/" hash="start" className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground sm:inline-block">Match with a therapist</Link>
+          <Link to="/get-started" className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground sm:inline-block">Match with a therapist</Link>
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -72,7 +72,7 @@ export function SiteHeader() {
               </li>
             ))}
             <li className="pt-2">
-              <Link to="/" hash="start" onClick={() => setOpen(false)} className={`${btn} w-full text-center`}>Match with a therapist</Link>
+              <Link to="/get-started" onClick={() => setOpen(false)} className={`${btn} w-full text-center`}>Match with a therapist</Link>
             </li>
           </ul>
         </nav>
@@ -108,7 +108,7 @@ export function SiteFooter() {
               {navItems.map((item) => (
                 <li key={item.label}><Link to={item.to} {...("hash" in item ? { hash: item.hash } : {})} className="transition-colors hover:text-primary">{item.label}</Link></li>
               ))}
-              <li><Link to="/" hash="start" className="transition-colors hover:text-primary">Match with a therapist <span aria-hidden="true">↗</span></Link></li>
+              <li><Link to="/get-started" className="transition-colors hover:text-primary">Match with a therapist <span aria-hidden="true">↗</span></Link></li>
             </ul>
           </nav>
           <div className="text-center md:text-left">

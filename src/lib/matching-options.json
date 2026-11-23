@@ -1,0 +1,836 @@
+{
+  "therapistPreferences": [
+    {
+      "text": "No particular preference",
+      "value": "no-preference"
+    },
+    {
+      "text": "Male",
+      "value": "male"
+    },
+    {
+      "text": "Female",
+      "value": "female"
+    },
+    {
+      "text": "From the LGBTQ+ community",
+      "value": "lgbtq"
+    },
+    {
+      "text": "Older Therapist",
+      "value": "older"
+    },
+    {
+      "text": "Therapist of colour",
+      "value": "poc"
+    }
+  ],
+  "country": [
+    {
+      "text": "Ireland",
+      "value": "ireland"
+    },
+    {
+      "text": "Scotland",
+      "value": "scotland"
+    },
+    {
+      "text": "United Kingdom",
+      "value": "uk"
+    },
+    {
+      "text": "Afghanistan",
+      "value": "afghanistan"
+    },
+    {
+      "text": "Albania",
+      "value": "albania"
+    },
+    {
+      "text": "Algeria",
+      "value": "algeria"
+    },
+    {
+      "text": "Andorra",
+      "value": "andorra"
+    },
+    {
+      "text": "Angola",
+      "value": "angola"
+    },
+    {
+      "text": "Antigua and Barbuda",
+      "value": "antigua"
+    },
+    {
+      "text": "Argentina",
+      "value": "argentina"
+    },
+    {
+      "text": "Armenia",
+      "value": "armenia"
+    },
+    {
+      "text": "Australia",
+      "value": "australia"
+    },
+    {
+      "text": "Austria",
+      "value": "austria"
+    },
+    {
+      "text": "Azerbaijan",
+      "value": "azerbaijan"
+    },
+    {
+      "text": "Bahamas",
+      "value": "bahamas"
+    },
+    {
+      "text": "Bahrain",
+      "value": "bahrain"
+    },
+    {
+      "text": "Bangladesh",
+      "value": "bangladesh"
+    },
+    {
+      "text": "Barbados",
+      "value": "barbados"
+    },
+    {
+      "text": "Belarus",
+      "value": "belarus"
+    },
+    {
+      "text": "Belgium",
+      "value": "belgium"
+    },
+    {
+      "text": "Belize",
+      "value": "belize"
+    },
+    {
+      "text": "Benin",
+      "value": "benin"
+    },
+    {
+      "text": "Bhutan",
+      "value": "bhutan"
+    },
+    {
+      "text": "Bolivia",
+      "value": "bolivia"
+    },
+    {
+      "text": "Bosnia and Herzegovina",
+      "value": "bosnia"
+    },
+    {
+      "text": "Botswana",
+      "value": "botswana"
+    },
+    {
+      "text": "Brazil",
+      "value": "brazil"
+    },
+    {
+      "text": "Brunei",
+      "value": "brunei"
+    },
+    {
+      "text": "Bulgaria",
+      "value": "bulgaria"
+    },
+    {
+      "text": "Burkina Faso",
+      "value": "burkina"
+    },
+    {
+      "text": "Burundi",
+      "value": "burundi"
+    },
+    {
+      "text": "Cambodia",
+      "value": "cambodia"
+    },
+    {
+      "text": "Cameroon",
+      "value": "cameroon"
+    },
+    {
+      "text": "Canada",
+      "value": "canada"
+    },
+    {
+      "text": "Cape Verde",
+      "value": "cape-verde"
+    },
+    {
+      "text": "Central African Republic",
+      "value": "central-african"
+    },
+    {
+      "text": "Chad",
+      "value": "chad"
+    },
+    {
+      "text": "Chile",
+      "value": "chile"
+    },
+    {
+      "text": "China",
+      "value": "china"
+    },
+    {
+      "text": "Colombia",
+      "value": "colombia"
+    },
+    {
+      "text": "Comoros",
+      "value": "comoros"
+    },
+    {
+      "text": "Congo",
+      "value": "congo"
+    },
+    {
+      "text": "Costa Rica",
+      "value": "costa-rica"
+    },
+    {
+      "text": "Croatia",
+      "value": "croatia"
+    },
+    {
+      "text": "Cuba",
+      "value": "cuba"
+    },
+    {
+      "text": "Cyprus",
+      "value": "cyprus"
+    },
+    {
+      "text": "Czech Republic",
+      "value": "czech"
+    },
+    {
+      "text": "Denmark",
+      "value": "denmark"
+    },
+    {
+      "text": "Djibouti",
+      "value": "djibouti"
+    },
+    {
+      "text": "Dominica",
+      "value": "dominica"
+    },
+    {
+      "text": "Dominican Republic",
+      "value": "dominican"
+    },
+    {
+      "text": "Ecuador",
+      "value": "ecuador"
+    },
+    {
+      "text": "Egypt",
+      "value": "egypt"
+    },
+    {
+      "text": "El Salvador",
+      "value": "el-salvador"
+    },
+    {
+      "text": "Equatorial Guinea",
+      "value": "equatorial"
+    },
+    {
+      "text": "Eritrea",
+      "value": "eritrea"
+    },
+    {
+      "text": "Estonia",
+      "value": "estonia"
+    },
+    {
+      "text": "Eswatini",
+      "value": "eswatini"
+    },
+    {
+      "text": "Ethiopia",
+      "value": "ethiopia"
+    },
+    {
+      "text": "Fiji",
+      "value": "fiji"
+    },
+    {
+      "text": "Finland",
+      "value": "finland"
+    },
+    {
+      "text": "France",
+      "value": "france"
+    },
+    {
+      "text": "Gabon",
+      "value": "gabon"
+    },
+    {
+      "text": "Gambia",
+      "value": "gambia"
+    },
+    {
+      "text": "Georgia",
+      "value": "georgia"
+    },
+    {
+      "text": "Germany",
+      "value": "germany"
+    },
+    {
+      "text": "Ghana",
+      "value": "ghana"
+    },
+    {
+      "text": "Greece",
+      "value": "greece"
+    },
+    {
+      "text": "Grenada",
+      "value": "grenada"
+    },
+    {
+      "text": "Guatemala",
+      "value": "guatemala"
+    },
+    {
+      "text": "Guinea",
+      "value": "guinea"
+    },
+    {
+      "text": "Guinea-Bissau",
+      "value": "guinea-bissau"
+    },
+    {
+      "text": "Guyana",
+      "value": "guyana"
+    },
+    {
+      "text": "Haiti",
+      "value": "haiti"
+    },
+    {
+      "text": "Honduras",
+      "value": "honduras"
+    },
+    {
+      "text": "Hungary",
+      "value": "hungary"
+    },
+    {
+      "text": "Iceland",
+      "value": "iceland"
+    },
+    {
+      "text": "India",
+      "value": "india"
+    },
+    {
+      "text": "Indonesia",
+      "value": "indonesia"
+    },
+    {
+      "text": "Iran",
+      "value": "iran"
+    },
+    {
+      "text": "Iraq",
+      "value": "iraq"
+    },
+    {
+      "text": "Israel",
+      "value": "israel"
+    },
+    {
+      "text": "Italy",
+      "value": "italy"
+    },
+    {
+      "text": "Ivory Coast",
+      "value": "ivory-coast"
+    },
+    {
+      "text": "Jamaica",
+      "value": "jamaica"
+    },
+    {
+      "text": "Japan",
+      "value": "japan"
+    },
+    {
+      "text": "Jordan",
+      "value": "jordan"
+    },
+    {
+      "text": "Kazakhstan",
+      "value": "kazakhstan"
+    },
+    {
+      "text": "Kenya",
+      "value": "kenya"
+    },
+    {
+      "text": "Kiribati",
+      "value": "kiribati"
+    },
+    {
+      "text": "Kosovo",
+      "value": "kosovo"
+    },
+    {
+      "text": "Kuwait",
+      "value": "kuwait"
+    },
+    {
+      "text": "Kyrgyzstan",
+      "value": "kyrgyzstan"
+    },
+    {
+      "text": "Laos",
+      "value": "laos"
+    },
+    {
+      "text": "Latvia",
+      "value": "latvia"
+    },
+    {
+      "text": "Lebanon",
+      "value": "lebanon"
+    },
+    {
+      "text": "Lesotho",
+      "value": "lesotho"
+    },
+    {
+      "text": "Liberia",
+      "value": "liberia"
+    },
+    {
+      "text": "Libya",
+      "value": "libya"
+    },
+    {
+      "text": "Liechtenstein",
+      "value": "liechtenstein"
+    },
+    {
+      "text": "Lithuania",
+      "value": "lithuania"
+    },
+    {
+      "text": "Luxembourg",
+      "value": "luxembourg"
+    },
+    {
+      "text": "Madagascar",
+      "value": "madagascar"
+    },
+    {
+      "text": "Malawi",
+      "value": "malawi"
+    },
+    {
+      "text": "Malaysia",
+      "value": "malaysia"
+    },
+    {
+      "text": "Maldives",
+      "value": "maldives"
+    },
+    {
+      "text": "Mali",
+      "value": "mali"
+    },
+    {
+      "text": "Malta",
+      "value": "malta"
+    },
+    {
+      "text": "Marshall Islands",
+      "value": "marshall"
+    },
+    {
+      "text": "Mauritania",
+      "value": "mauritania"
+    },
+    {
+      "text": "Mauritius",
+      "value": "mauritius"
+    },
+    {
+      "text": "Mexico",
+      "value": "mexico"
+    },
+    {
+      "text": "Micronesia",
+      "value": "micronesia"
+    },
+    {
+      "text": "Moldova",
+      "value": "moldova"
+    },
+    {
+      "text": "Monaco",
+      "value": "monaco"
+    },
+    {
+      "text": "Mongolia",
+      "value": "mongolia"
+    },
+    {
+      "text": "Montenegro",
+      "value": "montenegro"
+    },
+    {
+      "text": "Morocco",
+      "value": "morocco"
+    },
+    {
+      "text": "Mozambique",
+      "value": "mozambique"
+    },
+    {
+      "text": "Myanmar",
+      "value": "myanmar"
+    },
+    {
+      "text": "Namibia",
+      "value": "namibia"
+    },
+    {
+      "text": "Nauru",
+      "value": "nauru"
+    },
+    {
+      "text": "Nepal",
+      "value": "nepal"
+    },
+    {
+      "text": "Netherlands",
+      "value": "netherlands"
+    },
+    {
+      "text": "New Zealand",
+      "value": "new-zealand"
+    },
+    {
+      "text": "Nicaragua",
+      "value": "nicaragua"
+    },
+    {
+      "text": "Niger",
+      "value": "niger"
+    },
+    {
+      "text": "Nigeria",
+      "value": "nigeria"
+    },
+    {
+      "text": "North Korea",
+      "value": "north-korea"
+    },
+    {
+      "text": "North Macedonia",
+      "value": "north-macedonia"
+    },
+    {
+      "text": "Norway",
+      "value": "norway"
+    },
+    {
+      "text": "Oman",
+      "value": "oman"
+    },
+    {
+      "text": "Pakistan",
+      "value": "pakistan"
+    },
+    {
+      "text": "Palau",
+      "value": "palau"
+    },
+    {
+      "text": "Palestine",
+      "value": "palestine"
+    },
+    {
+      "text": "Panama",
+      "value": "panama"
+    },
+    {
+      "text": "Papua New Guinea",
+      "value": "papua"
+    },
+    {
+      "text": "Paraguay",
+      "value": "paraguay"
+    },
+    {
+      "text": "Peru",
+      "value": "peru"
+    },
+    {
+      "text": "Philippines",
+      "value": "philippines"
+    },
+    {
+      "text": "Poland",
+      "value": "poland"
+    },
+    {
+      "text": "Portugal",
+      "value": "portugal"
+    },
+    {
+      "text": "Qatar",
+      "value": "qatar"
+    },
+    {
+      "text": "Romania",
+      "value": "romania"
+    },
+    {
+      "text": "Russia",
+      "value": "russia"
+    },
+    {
+      "text": "Rwanda",
+      "value": "rwanda"
+    },
+    {
+      "text": "Saint Kitts and Nevis",
+      "value": "saint-kitts"
+    },
+    {
+      "text": "Saint Lucia",
+      "value": "saint-lucia"
+    },
+    {
+      "text": "Saint Vincent and the Grenadines",
+      "value": "saint-vincent"
+    },
+    {
+      "text": "Samoa",
+      "value": "samoa"
+    },
+    {
+      "text": "San Marino",
+      "value": "san-marino"
+    },
+    {
+      "text": "Sao Tome and Principe",
+      "value": "sao-tome"
+    },
+    {
+      "text": "Saudi Arabia",
+      "value": "saudi-arabia"
+    },
+    {
+      "text": "Senegal",
+      "value": "senegal"
+    },
+    {
+      "text": "Serbia",
+      "value": "serbia"
+    },
+    {
+      "text": "Seychelles",
+      "value": "seychelles"
+    },
+    {
+      "text": "Sierra Leone",
+      "value": "sierra-leone"
+    },
+    {
+      "text": "Singapore",
+      "value": "singapore"
+    },
+    {
+      "text": "Slovakia",
+      "value": "slovakia"
+    },
+    {
+      "text": "Slovenia",
+      "value": "slovenia"
+    },
+    {
+      "text": "Solomon Islands",
+      "value": "solomon"
+    },
+    {
+      "text": "Somalia",
+      "value": "somalia"
+    },
+    {
+      "text": "South Africa",
+      "value": "south-africa"
+    },
+    {
+      "text": "South Korea",
+      "value": "south-korea"
+    },
+    {
+      "text": "South Sudan",
+      "value": "south-sudan"
+    },
+    {
+      "text": "Spain",
+      "value": "spain"
+    },
+    {
+      "text": "Sri Lanka",
+      "value": "sri-lanka"
+    },
+    {
+      "text": "Sudan",
+      "value": "sudan"
+    },
+    {
+      "text": "Suriname",
+      "value": "suriname"
+    },
+    {
+      "text": "Sweden",
+      "value": "sweden"
+    },
+    {
+      "text": "Switzerland",
+      "value": "switzerland"
+    },
+    {
+      "text": "Syria",
+      "value": "syria"
+    },
+    {
+      "text": "Taiwan",
+      "value": "taiwan"
+    },
+    {
+      "text": "Tajikistan",
+      "value": "tajikistan"
+    },
+    {
+      "text": "Tanzania",
+      "value": "tanzania"
+    },
+    {
+      "text": "Thailand",
+      "value": "thailand"
+    },
+    {
+      "text": "Timor-Leste",
+      "value": "timor-leste"
+    },
+    {
+      "text": "Togo",
+      "value": "togo"
+    },
+    {
+      "text": "Tonga",
+      "value": "tonga"
+    },
+    {
+      "text": "Trinidad and Tobago",
+      "value": "trinidad"
+    },
+    {
+      "text": "Tunisia",
+      "value": "tunisia"
+    },
+    {
+      "text": "Turkey",
+      "value": "turkey"
+    },
+    {
+      "text": "Turkmenistan",
+      "value": "turkmenistan"
+    },
+    {
+      "text": "Tuvalu",
+      "value": "tuvalu"
+    },
+    {
+      "text": "Uganda",
+      "value": "uganda"
+    },
+    {
+      "text": "Ukraine",
+      "value": "ukraine"
+    },
+    {
+      "text": "United Arab Emirates",
+      "value": "united-arab"
+    },
+    {
+      "text": "United States",
+      "value": "united-states"
+    },
+    {
+      "text": "Uruguay",
+      "value": "uruguay"
+    },
+    {
+      "text": "Uzbekistan",
+      "value": "uzbekistan"
+    },
+    {
+      "text": "Vanuatu",
+      "value": "vanuatu"
+    },
+    {
+      "text": "Vatican City",
+      "value": "vatican"
+    },
+    {
+      "text": "Venezuela",
+      "value": "venezuela"
+    },
+    {
+      "text": "Vietnam",
+      "value": "vietnam"
+    },
+    {
+      "text": "Yemen",
+      "value": "yemen"
+    },
+    {
+      "text": "Zambia",
+      "value": "zambia"
+    },
+    {
+      "text": "Zimbabwe",
+      "value": "zimbabwe"
+    }
+  ],
+  "appointmentFlexibility": [
+    {
+      "text": "Prefer mornings",
+      "value": "mornings"
+    },
+    {
+      "text": "Prefer afternoons",
+      "value": "afternoons"
+    },
+    {
+      "text": "Prefer evenings (after 5pm)",
+      "value": "evenings"
+    },
+    {
+      "text": "I am flexible",
+      "value": "flexible"
+    }
+  ]
+}

@@ -19,6 +19,8 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Accredited Irish therapists (IACP, PSI) over secure video. Individuals and couples, from €80." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: heroAsset.url },
+      { name: "twitter:image", content: heroAsset.url },
     ],
   }),
   component: Index,
@@ -73,7 +75,7 @@ function Index() {
               Connect with accredited Irish therapists for individuals and couples. Safe, secure, and video-based counselling designed for your life.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Button asChild className="h-auto rounded-full px-6 py-3.5"><a href="https://feelbettertherapy.ie/get-started">Match with a therapist <ArrowUpRight /></a></Button>
+              <Button asChild className="h-auto rounded-full px-6 py-3.5"><Link to="/get-started">Match with a therapist <ArrowUpRight /></Link></Button>
               <Button asChild variant="ghost" className="h-auto rounded-full px-2 py-3.5 text-primary"><a href="#how-it-works">How it works <ArrowRight /></a></Button>
             </div>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground"><strong className="font-medium text-foreground">Trusted by 1,000+ people</strong><br />From €80 · No GP referral needed</p>
@@ -114,7 +116,7 @@ function Index() {
           <h2 className="font-display text-4xl font-light">You arrive somewhere. We start from there.</h2>
           <p className="mt-6 text-muted-foreground">Feelings rarely move from heavy to light inside an hour. The first session is not about fixing anything — it is about being heard clearly, and agreeing together what would actually help.</p>
           <p className="mt-4 text-muted-foreground">So we begin with where you are, not with a label, a diagnosis or a technique. Those can come later, if they are useful at all.</p>
-          <Button asChild className="mt-8 h-auto rounded-full px-7 py-3.5"><a href="https://feelbettertherapy.ie/get-started">Match with a therapist <ArrowUpRight /></a></Button>
+          <Button asChild className="mt-8 h-auto rounded-full px-7 py-3.5"><Link to="/get-started">Match with a therapist <ArrowUpRight /></Link></Button>
         </div>
         <HomeMood />
       </section>
@@ -126,12 +128,12 @@ function Index() {
           <p className="mt-4 text-muted-foreground">Tell us what you want to change. You don't need to know the name of the work.</p>
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {services.map(([t, d, p, len], i) => (
-              <a key={t} href="https://feelbettertherapy.ie/get-started" className="home-service group flex flex-col rounded-lg border border-border bg-card p-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:p-8">
+              <Link key={t} to="/get-started" className="home-service group flex flex-col rounded-lg border border-border bg-card p-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:p-8">
                 <div className="flex items-center justify-between gap-4"><span className="text-xs text-muted-foreground">0{i + 1} / {serviceTags[i]}</span><ArrowUpRight className="size-5 text-primary transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transition-none" /></div>
                 <h3 className="mt-5 font-display text-2xl font-light group-hover:text-primary">{t}</h3>
                 <p className="mt-2 text-muted-foreground">{d}</p>
                 <div className="mt-auto pt-7"><p className="flex items-center justify-between gap-4 border-t border-border pt-5"><span className="font-display text-3xl text-primary">{p}</span> <span className="flex items-center gap-2 text-sm text-muted-foreground"><Clock3 className="size-3.5" />{len}</span></p></div>
-              </a>
+              </Link>
             ))}
           </div>
           <p className="mt-8 max-w-2xl text-sm text-muted-foreground">Therapy is not a crisis or emergency service, a quick fix, or a replacement for medical care. If you need support now, Samaritans is on <a className="underline" href="tel:116123">116 123</a>, free, any time.</p>
@@ -151,7 +153,7 @@ function Index() {
               </li>
             ))}
           </ol>
-          <Button asChild className="mt-8 h-auto rounded-full px-7 py-3.5"><a href="https://feelbettertherapy.ie/get-started">Match with a therapist <ArrowUpRight /></a></Button>
+          <Button asChild className="mt-8 h-auto rounded-full px-7 py-3.5"><Link to="/get-started">Match with a therapist <ArrowUpRight /></Link></Button>
         </div>
         <figure>
           <img src="/images/panel-matching.webp" alt="A winding path connects an open book and envelope to a person approaching an open door" className="w-full rounded-[2rem]" />
@@ -196,7 +198,7 @@ function Index() {
             <ul className="mt-8 flex flex-wrap gap-3">
               {places.map((p) => <li key={p} className="rounded-full bg-card px-5 py-2">{p}</li>)}
             </ul>
-            <Button asChild className="mt-8 h-auto rounded-full px-7 py-3.5"><a href="https://feelbettertherapy.ie/get-started">Match with a therapist <ArrowUpRight /></a></Button>
+            <Button asChild className="mt-8 h-auto rounded-full px-7 py-3.5"><Link to="/get-started">Match with a therapist <ArrowUpRight /></Link></Button>
           </div>
           <img src="/images/barriers-illustration.webp" alt="Two cups and a phone on a wooden table by a rain-streaked window" className="w-full rounded-[2rem]" />
         </div>
@@ -221,7 +223,7 @@ function Index() {
           <p className="mb-5 flex items-center justify-center gap-2 text-sm opacity-80"><Clock3 className="size-4" />A first step, in just two minutes</p>
           <h2 className="font-display text-4xl font-light leading-tight md:text-5xl">You don’t have to do it all alone.</h2>
           <p className="mx-auto mt-5 max-w-lg leading-relaxed opacity-80">A little space to talk. Someone who listens. Start with a therapist who feels right for you.</p>
-          <Button asChild variant="secondary" className="mt-8 h-auto rounded-full bg-background px-7 py-4 text-foreground hover:bg-secondary"><a href="https://feelbettertherapy.ie/get-started">Match with a therapist <ArrowUpRight /></a></Button>
+          <Button asChild variant="secondary" className="mt-8 h-auto rounded-full bg-background px-7 py-4 text-foreground hover:bg-secondary"><Link to="/get-started">Match with a therapist <ArrowUpRight /></Link></Button>
           <div className="mx-auto mt-9 grid max-w-2xl gap-5 text-sm opacity-85 sm:grid-cols-3">
             <span><strong className="block font-medium">From €80</strong><span className="mt-1 block text-xs">50-minute sessions</span></span><span><strong className="block font-medium">100% confidential</strong><span className="mt-1 block text-xs">Secure online sessions</span></span><span><strong className="block font-medium">No GP referral</strong><span className="mt-1 block text-xs">Come as you are</span></span>
           </div>
