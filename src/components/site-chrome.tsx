@@ -19,6 +19,7 @@ const navItems = [
   { to: "/services", label: "Services" },
   { to: "/pricing", label: "Pricing" },
   { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
 ] as const;
 
 export const btn = "inline-block rounded-full bg-primary px-7 py-3.5 font-medium text-primary-foreground transition hover:opacity-90";
