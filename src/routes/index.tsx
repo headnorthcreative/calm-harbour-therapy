@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { HomeMood } from "@/components/home-mood";
 import { serviceDetails } from "@/lib/therapy-services";
 import { SiteHeader, SiteFooter, Eyebrow, btnGhost } from "@/components/site-chrome";
-import heroAsset from "@/assets/cosy-macbook-window.png.asset.json";
+import heroAsset from "@/assets/maura-hero.webp.asset.json";
 import iacpLogo from "@/assets/iacp.webp.asset.json";
 import psiLogo from "@/assets/psi.avif.asset.json";
 import coruLogo from "@/assets/coru.avif.asset.json";
@@ -81,7 +81,7 @@ function Index() {
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground"><strong className="font-medium text-foreground">Trusted by 1,000+ people</strong><br />From €80 · No GP referral needed</p>
           </div>
           <figure className="home-photo relative mx-auto w-full max-w-[420px] pb-6">
-            <img src={heroAsset.url} alt="A woman relaxing in a green armchair with her laptop beside a bright window and houseplants" className="home-photo-image h-auto w-full rounded-t-[8rem] rounded-b-lg" />
+            <img src={heroAsset.url} alt="A smiling woman in a cream cardigan seated in an olive armchair with a laptop on her lap, a bookcase and bright window behind her" className="home-photo-image h-auto w-full rounded-t-[8rem] rounded-b-lg" />
             <figcaption className="home-photo-badge absolute bottom-0 left-3 right-3 flex items-center gap-3 rounded-lg border border-border/70 p-4 sm:left-6 sm:right-6">
               <span className="grid size-10 shrink-0 place-items-center rounded-full bg-secondary text-primary"><ShieldCheck className="size-5" strokeWidth={1.5} /></span>
               <span className="min-w-0 text-sm"><strong className="block font-medium">Matched within {serviceDetails.matchingHours} hours</strong><span className="mt-0.5 block text-xs text-muted-foreground">Real people. Personal matching. Secure video.</span></span>
