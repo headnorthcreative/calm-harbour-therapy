@@ -23,7 +23,8 @@ const plans: { t: string; d: string; p: string; len: string; save?: [string, str
   { t: "Individual bundle", d: "Four 50-minute sessions, valid for six months, with priority scheduling.", p: "€300", len: "4 sessions", save: ["€80 for each session", "Save €20 with the bundle"] },
   { t: "Couples session", d: "A 60-minute joint video session for both partners, with practical relationship tools and room for each person to talk.", p: "€120", len: "60 minutes" },
   { t: "Couples bundle", d: "Four 60-minute joint sessions for consistent support and more time to work through what matters to you both.", p: "€450", len: "4 sessions", save: ["€120 for each session", "Save €30 with the bundle"] },
-  { t: "Extended session", d: "An 80-minute individual session for EMDR or other focused therapeutic work, when this format is right for you.", p: "€110", len: "80 minutes" },
+  { t: "Extended couples session", d: "A 90-minute couple session that allows additional time to work something through together.", p: "€150", len: "90 minutes" },
+  { t: "Extended session", d: "An 80-minute individual session for deeper exploration or other focused therapeutic work, when this format is right for you.", p: "€110", len: "80 minutes" },
 ];
 const faqs = [
   ["Do you accept medical cards?", "Currently, we are a private practice and do not directly accept medical cards. However, we offer competitive rates and bundles to help make therapy more accessible."],
@@ -76,10 +77,11 @@ function Pricing() {
           <Eyebrow n="01">Prices</Eyebrow>
           <h2 className="font-display text-4xl font-light">Session prices, in plain language.</h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">Every option includes secure online therapy and a professional receipt after payment. What you can claim back depends on your own insurance plan.</p>
+          <p className="mt-4 max-w-2xl rounded-lg border border-border bg-card px-5 py-4 text-sm"><strong className="font-medium">Tax relief:</strong> <span className="text-muted-foreground">Claim 20% Income Tax Relief as a Revenue qualifying health expense.</span></p>
           <div className="mt-10 space-y-4">
             {plans.map((pl, i) => (
               <div key={pl.t} className="home-service grid gap-6 rounded-lg border border-border bg-card p-7 md:grid-cols-[auto_1fr_auto] md:items-center md:p-8">
-                <span className="text-sm text-muted-foreground">0{i + 1}</span>
+                <span className="text-sm text-muted-foreground">{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <h3 className="font-display text-2xl font-light">{pl.t}</h3>
                   <p className="mt-2 max-w-xl text-muted-foreground">{pl.d}</p>

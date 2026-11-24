@@ -21,7 +21,7 @@ export const Route = createFileRoute("/about")({
 
 const values = [
   { title: "Accessibility", description: "Professional care from anywhere. We remove the geographic and logistical barriers to getting help.", icon: Wifi },
-  { title: "Professionalism", description: "Every therapist is fully accredited by IACP or PSI, ensuring the highest standard of clinical care.", icon: ShieldCheck },
+  { title: "Professionalism", description: "Every therapist is fully accredited/registered by IACP, PSI or the relevant Irish governing bodies, ensuring the highest standard of clinical care.", icon: ShieldCheck },
   { title: "Compassion", description: "A human-first approach. We treat every individual with kindness, empathy, and respect.", icon: HeartHandshake },
   { title: "Privacy", description: "Your space is sacred. We utilize state-of-the-art encryption to keep your sessions completely confidential.", icon: LockKeyhole },
 ];
@@ -29,8 +29,8 @@ const values = [
 const methods = [
   { title: "CBT (Cognitive Behavioral Therapy)", description: "Focuses on challenging and changing unhelpful cognitive distortions and behaviors." },
   { title: "ACT (Acceptance & Commitment Therapy)", description: "Uses acceptance and mindfulness strategies to increase psychological flexibility." },
-  { title: "Humanistic Therapy", description: "Emphasizes individual potential and the importance of growth and self-actualization." },
-  { title: "Couples Counseling", description: "Specialized support for navigating relationship dynamics and communication." },
+  { title: "Humanistic Therapy", description: "Emphasises individual potential and the importance of growth and self-actualization." },
+  { title: "Couples Counselling", description: "Specialised support for navigating relationship dynamics and communication." },
 ];
 
 function About() {
@@ -61,7 +61,7 @@ function About() {
           <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-24">
             <figure className="mx-auto w-full max-w-64 md:max-w-80">
               <img src={founderAsset.url} alt="Maura Davis, founder, psychologist and psychotherapist at Feel Better Therapy" className="home-photo-image h-auto w-full rounded-t-[6rem] rounded-b-lg" loading="lazy" />
-              <figcaption className="mt-4 text-sm"><strong className="font-medium">Maura Davis</strong><span className="mt-1 block text-muted-foreground">Founder, Psychologist &amp; Psychotherapist</span></figcaption>
+              <figcaption className="mt-4 text-sm"><strong className="font-medium">Maura Davis</strong><span className="mt-1 block text-muted-foreground">Founder &amp; Psychotherapist</span></figcaption>
             </figure>
             <div>
               <Eyebrow n="02">Our story</Eyebrow>

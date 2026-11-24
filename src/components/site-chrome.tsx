@@ -1,3 +1,4 @@
+import irishIndependentLogo from "@/assets/irish-independent.svg.asset.json";
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -86,13 +87,17 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-secondary/40">
       <div className="mx-auto max-w-6xl px-6">
         <section aria-labelledby="footer-accreditation" className="border-b border-border py-12 md:py-14">
-          <h2 id="footer-accreditation" className="text-center text-sm font-medium text-muted-foreground">Fully accredited therapists from</h2>
+          <h2 id="footer-accreditation" className="text-center text-sm font-medium text-muted-foreground">Fully registered &amp; accredited therapists from</h2>
           <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 items-center gap-x-8 gap-y-7 sm:grid-cols-4 sm:gap-x-10">
             {accreditations.map(({ name, asset }) => (
               <div key={name} className="flex h-20 items-center justify-center md:h-24">
                 <img src={asset.url} alt={name} loading="lazy" className="max-h-full w-full max-w-48 object-contain grayscale" />
               </div>
             ))}
+          </div>
+          <div className="mt-12 flex flex-col items-center gap-4">
+            <p className="text-sm font-medium text-muted-foreground">As featured in</p>
+            <img src={irishIndependentLogo.url} alt="Irish Independent" loading="lazy" className="h-7 w-auto md:h-8" />
           </div>
         </section>
         <div className="grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr] md:gap-16">

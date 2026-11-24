@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 const services = [
   ["Individual therapy", "A private, one-to-one space to talk through what is happening and what you would like to change.", "€80", "50 min"],
   ["Couples therapy", "A joint session where both partners get room to listen, talk and work through difficulties together.", "€120", "60 min"],
-  ["Extended session", "An 80-minute individual session for EMDR or other focused work, when that format is right for you.", "€110", "80 min"],
+  ["Extended session", "An 80-minute individual session for deeper exploration or other focused work, when that format is right for you.", "€110", "80 min"],
   ["Four-session bundle", "Four sessions at a lower rate, valid for six months, with priority scheduling.", "€300", "4 sessions"],
 ];
 const steps = [
@@ -40,13 +40,13 @@ const steps = [
 const features = [
   ["Fully Accredited", "All therapists are registered with IACP, PSI, or relevant Irish governing bodies."],
   ["Secure & Private", "Bank-level encryption for your video calls and personal data. Your privacy is paramount."],
-  ["Transparent Pricing", "Clear pricing per session. No subscriptions or hidden fees. Many offer student rates."],
+  ["Transparent Pricing", "Clear pricing per session. No subscriptions or hidden fees."],
   ["Flexible Scheduling", "Early mornings, evenings, and weekends available to suit your busy lifestyle."],
 ];
 const why = ["Tailored matching based on your needs", "Support for anxiety, depression, & more", "No GP referral needed"];
 const stories = [
   ["I was hesitant about online therapy, but my therapist made me feel so comfortable. Being able to do sessions from my living room has been a game changer for my anxiety.", "Sarah M.", "Dublin"],
-  ["The matching process was incredibly easy. I found a counsellor who specializes in work-related stress, and the tools I've learned have helped immensely.", "Conor D.", "Cork"],
+  ["The matching process was incredibly easy. I found a counsellor who specialises in work-related stress, and the tools I've learned have helped immensely.", "Conor D.", "Cork"],
   ["Highly recommend for anyone with a busy schedule. The evening appointments are a lifesaver, and the video quality is excellent.", "Aoife K.", "Galway"],
 ];
 const places = ["Dublin", "Cork", "Galway", "Limerick", "Waterford", "Anywhere with a signal"];
@@ -90,7 +90,7 @@ function Index() {
         </div>
         <div className="relative mx-auto grid max-w-6xl gap-6 border-t border-border px-6 py-7 text-sm text-muted-foreground md:grid-cols-3">
           <span className="block text-center">
-            <strong className="block font-normal text-foreground">Fully accredited therapists from</strong>
+            <strong className="block font-normal text-foreground">Fully registered &amp; accredited therapists from</strong>
             <span className="mt-2 block">IACP · PSI · CORU · IAHIP</span>
           </span>
           <span className="block text-center">
